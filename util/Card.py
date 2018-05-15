@@ -16,7 +16,8 @@ class Card:
         :return: no return value
         """
         cards = list(range(2,11)) + ["Jack","Queen","King","Ace"]
-        print(str(cards[self.value]) + " of %s" % self.suit)
+        val = cards[self.value - 2]
+        return str(val) + " of %s" % (self.suit,)
 
     def __repr__(self):
-        print("Card(%d,%s)" % (self.value,self.suit))
+        return "Card(%d,%s)" % (self.value,self.suit)

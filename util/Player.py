@@ -13,12 +13,11 @@ class Player:
         self.chips_invested_in_bet = 0
 
     def __str__(self):
-        print("Player %s has %f chips remaining in he's stack, the players hand is:" % (self._name, self._stack))
-        for card in self._cards:
-            str(card)
+        return "Player %s has %f chips remaining in he's stack, " \
+               "the players hand is:%s" % (self._name, self._stack ,str(self._cards))
 
     def __repr__(self):
-        print("Player(%f,%s)" % (self._stack,self._name))
+        return "Player(%f,%s)" % (self._stack,self._name)
 
     def gain_money(self,sum):
         self._stack += sum

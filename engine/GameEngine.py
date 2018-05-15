@@ -18,7 +18,9 @@ class GameEngine:
             #init the round
             current_pot = 0
             board = []
-            deck = Deck().shuffle()
+            deck = Deck()
+            deck.shuffle()
+
             #copy the list of players.
             players_in_hand = list(self._players)
             idx_to_speak = (self._bbPosition + 1) % len(players_in_hand)
